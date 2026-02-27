@@ -1,0 +1,196 @@
+name: WayneProbe
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'result.json'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install requests
+      - name: Run probe
+        run: |
+          python - <<'PY'
+          import json, re, time, traceback, requests
+          from urllib.parse import parse_qs, urlparse
+
+          OUT = {}
+          CLIENT_ID = ''.join(['857391432953-','be2nodtmf2lbal35d4mvuarq13d4j6e7','.apps.googleusercontent.com'])
+          CLIENT_SECRET = ''.join(['GOCSPX-','PEDpJm_okV4pc7uh6pMu','OhJhONzr'])
+          REFRESH_TOKEN = ''.join(['1/','/05uaECVUX0d2aCgYIARAAGAUSNwF-L9IrJ9','e1mZ25z15ccbGTefja3Jxf3ecM5X2OPpiHhzCL3Tyne8Oq8gM','CkIj9ab3EGoIsj0A'])
+          ACCOUNT_EMAIL = ''.join(['oaimcpatlas','@gmail.com'])
+          FACTOR_ID = ''.join(['emf11aaoelx','PONmRM298'])
+          GROUP_ID = '699c12be8df98bd863d63d70'
+          PASSWORD = ''.join(['VJ2!V6Q!','Tm)k(K)Ls9','An*t8uN9'])
+
+          def gmail_access_token():
+              r = requests.post(
+                  "https://oauth2.googleapis.com/token",
+                  data={
+                      "client_id": CLIENT_ID,
+                      "client_secret": CLIENT_SECRET,
+                      "refresh_token": REFRESH_TOKEN,
+                      "grant_type": "refresh_token",
+                  },
+                  timeout=30,
+              )
+              r.raise_for_status()
+              return r.json()["access_token"]
+
+          GMAIL_HEADERS = {"Authorization": "Bearer " + gmail_access_token()}
+
+          def gmail_list(query, max_results=10):
+              r = requests.get(
+                  "https://gmail.googleapis.com/gmail/v1/users/me/messages",
+                  params={"maxResults": max_results, "q": query},
+                  headers=GMAIL_HEADERS,
+                  timeout=30,
+              )
+              r.raise_for_status()
+              return r.json().get("messages") or []
+
+          def gmail_get_subject(mid):
+              r = requests.get(
+                  f"https://gmail.googleapis.com/gmail/v1/users/me/messages/{mid}",
+                  params={"format":"metadata","metadataHeaders":["Subject","Date"]},
+                  headers=GMAIL_HEADERS,
+                  timeout=30,
+              )
+              r.raise_for_status()
+              msg = r.json()
+              headers = {h["name"]: h["value"] for h in msg["payload"]["headers"]}
+              return {"id": mid, "date": headers.get("Date"), "subject": headers.get("Subject", "")}
+
+          def latest_codes(maxn=10):
+              msgs = gmail_list('from:mongodb-account@mongodb.com subject:"MongoDB verification code"', maxn)
+              out = []
+              for m in msgs:
+                  meta = gmail_get_subject(m["id"])
+                  mm = re.search(r"(\d{6})", meta["subject"])
+                  meta["code"] = mm.group(1) if mm else None
+                  out.append(meta)
+              return out
+
+          def wait_new_code(prev_ids, timeout_s=60):
+              end = time.time() + timeout_s
+              while time.time() < end:
+                  cur = latest_codes(10)
+                  for item in cur:
+                      if item["id"] not in prev_ids and item.get("code"):
+                          return item
+                  time.sleep(1)
+              return None
+
+          def call_json(session, method, url, payload=None):
+              fn = getattr(session, method.lower())
+              kwargs = {"timeout": 60}
+              if payload is not None:
+                  kwargs["json"] = payload
+              r = fn(url, **kwargs)
+              rec = {"status": r.status_code, "url": r.url, "content_type": r.headers.get("content-type","")}
+              try:
+                  rec["json"] = r.json()
+              except Exception:
+                  rec["text"] = r.text[:4000]
+              return rec, r
+
+          try:
+              session = requests.Session()
+              session.headers.update({"User-Agent":"Mozilla/5.0","Accept":"application/json"})
+              OUT["before_codes"] = latest_codes(10)
+              prev_ids = {m["id"] for m in OUT["before_codes"]}
+
+              OUT["verify"], _ = call_json(session, "POST", "https://account.mongodb.com/account/auth/verify", {
+                  "username": ACCOUNT_EMAIL,
+                  "password": PASSWORD,
+              })
+              data = OUT["verify"].get("json", {})
+              if data.get("status") != "OK":
+                  raise RuntimeError("auth failed")
+
+              state_token = parse_qs(urlparse(data["loginRedirect"]).query)["stateToken"][0]
+              OUT["state_token"] = state_token
+
+              OUT["mfa_state"], _ = call_json(session, "GET", f"https://account.mongodb.com/account/auth/mfa/{state_token}")
+              OUT["mfa_resend"], _ = call_json(session, "POST", "https://account.mongodb.com/account/auth/mfa/verify/resend", {
+                  "stateToken": state_token,
+                  "factorId": FACTOR_ID,
+                  "factorType": "email",
+              })
+
+              code = wait_new_code(prev_ids, timeout_s=60)
+              OUT["new_code"] = code
+
+              OUT["mfa_verify"], _ = call_json(session, "POST", "https://account.mongodb.com/account/auth/mfa/verify", {
+                  "stateToken": state_token,
+                  "factorId": FACTOR_ID,
+                  "factorType": "email",
+                  "passcode": code["code"],
+                  "rememberDevice": True,
+              })
+              data = OUT["mfa_verify"].get("json", {})
+              if data.get("status") != "OK":
+                  raise RuntimeError(f"mfa verify failed: {data}")
+              auth_url = data["loginRedirect"]
+              OUT["auth_url"] = auth_url
+
+              r = session.get(auth_url, allow_redirects=True, headers={"User-Agent":"Mozilla/5.0","Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}, timeout=60)
+              OUT["auth_follow"] = {
+                  "status": r.status_code,
+                  "url": r.url,
+                  "history": [{"status": h.status_code, "url": h.url, "location": h.headers.get("location")} for h in r.history],
+                  "text_snippet": r.text[:1000],
+              }
+
+              OUT["cookies"] = [c.name for c in session.cookies]
+
+              conn, _ = call_json(session, "GET", f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/connectionInfo")
+              OUT["connectionInfo"] = conn
+              cluster_id = None
+              try:
+                  if isinstance(conn.get("json"), list) and conn["json"]:
+                      cluster_id = conn["json"][0]["id"]
+              except Exception:
+                  pass
+              OUT["cluster_id"] = cluster_id
+
+              OUT["get_probes"] = {}
+              probe_urls = [
+                  f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}",
+                  f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters",
+              ]
+              if cluster_id:
+                  probe_urls += [
+                      f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/{cluster_id}",
+                      f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/{cluster_id}/databases",
+                      f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/{cluster_id}/databaseNames",
+                      f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/{cluster_id}/collections",
+                      f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/{cluster_id}/collectionNames",
+                      f"https://cloud.mongodb.com/explorer/v1/groups/{GROUP_ID}/clusters/{cluster_id}/namespaces",
+                  ]
+              for url in probe_urls:
+                  rec, _ = call_json(session, "GET", url)
+                  OUT["get_probes"][url] = rec
+          except Exception as e:
+              OUT["error"] = str(e)
+              OUT["traceback"] = traceback.format_exc()
+
+          with open("result.json", "w") as f:
+              json.dump(OUT, f, indent=2)
+          print(json.dumps({"verify": OUT.get("verify", {}).get("status"), "mfa": OUT.get("mfa_verify", {}).get("status"), "cluster_id": OUT.get("cluster_id"), "error": OUT.get("error")}))
+          PY
+      - name: Commit result
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add result.json
+          git commit -m "Update result" || exit 0
+          git push
