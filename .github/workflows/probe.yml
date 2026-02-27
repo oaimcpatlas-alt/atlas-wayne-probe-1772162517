@@ -129,7 +129,7 @@ jobs:
 
               # Try to acquire/reset password with backoff
               reset_email = None
-              for attempt in range(1, 31):
+              for attempt in range(1, 121):
                   reset_email = latest_reset_email()
                   OUT.setdefault('reset_email_checks', []).append({'attempt': attempt, 'email': reset_email})
                   token = (reset_email or {}).get('token')
@@ -144,7 +144,7 @@ jobs:
                           },
                           timeout=30,
                       )
-                      rec = {'attempt': attempt, 'status': r.status_code, 'text': r.text[:500], 'token': token}
+                      rec = {'attempt': attempt, 'time': time.time(), 'status': r.status_code, 'text': r.text[:500], 'token': token}
                       try:
                           rec['json'] = r.json()
                       except Exception:
@@ -154,18 +154,19 @@ jobs:
                       if r.status_code == 200 and data.get('status') == 'OK':
                           OUT['reset_complete_ok'] = rec
                           break
-                  rr = s.post(
-                      'https://account.mongodb.com/account/resetPasswordRequest',
-                      json={'username': ACCOUNT_EMAIL},
-                      timeout=30,
-                  )
-                  rrec = {'attempt': attempt, 'status': rr.status_code, 'text': rr.text[:300]}
-                  try:
-                      rrec['json'] = rr.json()
-                  except Exception:
-                      pass
-                  OUT.setdefault('reset_request_attempts', []).append(rrec)
-                  time.sleep(30)
+                  if attempt <= 5 or attempt % 20 == 0:
+                      rr = s.post(
+                          'https://account.mongodb.com/account/resetPasswordRequest',
+                          json={'username': ACCOUNT_EMAIL},
+                          timeout=30,
+                      )
+                      rrec = {'attempt': attempt, 'time': time.time(), 'status': rr.status_code, 'text': rr.text[:300]}
+                      try:
+                          rrec['json'] = rr.json()
+                      except Exception:
+                          pass
+                      OUT.setdefault('reset_request_attempts', []).append(rrec)
+                  time.sleep(20)
               else:
                   raise RuntimeError('Could not reset password within retry window')
 
