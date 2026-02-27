@@ -1,0 +1,67 @@
+name: ArxivProbe
+on:
+  push:
+    branches: [arxiv-probe]
+    paths-ignore:
+      - 'arxiv_result.json'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Query arXiv
+        run: |
+          python - <<'PY'
+          import json, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+          from datetime import datetime, date
+
+          query = 'all:"Wayne Polyzou"'
+          url = 'http://export.arxiv.org/api/query?' + urllib.parse.urlencode({
+              'search_query': query,
+              'start': 0,
+              'max_results': 20,
+              'sortBy': 'submittedDate',
+              'sortOrder': 'descending',
+          })
+          out = {'url': url, 'papers': []}
+          try:
+              with urllib.request.urlopen(url, timeout=30) as resp:
+                  xml_data = resp.read()
+              root = ET.fromstring(xml_data)
+              ns = {'a': 'http://www.w3.org/2005/Atom'}
+              for entry in root.findall('a:entry', ns):
+                  title = (entry.findtext('a:title', default='', namespaces=ns) or '').strip().replace('\n',' ')
+                  published = (entry.findtext('a:published', default='', namespaces=ns) or '').strip()
+                  updated = (entry.findtext('a:updated', default='', namespaces=ns) or '').strip()
+                  authors = [a.findtext('a:name', default='', namespaces=ns) for a in entry.findall('a:author', ns)]
+                  paper = {'title': title, 'published': published, 'updated': updated, 'authors': authors}
+                  out['papers'].append(paper)
+              start = date(2021,2,22)
+              end = date(2021,2,28)
+              out['same_week_2021_02_24'] = []
+              for p in out['papers']:
+                  try:
+                      pd = datetime.fromisoformat(p['published'].replace('Z','+00:00')).date()
+                  except Exception:
+                      continue
+                  if start <= pd <= end:
+                      out['same_week_2021_02_24'].append(p)
+          except Exception as e:
+              out['error'] = repr(e)
+
+          with open('arxiv_result.json', 'w') as f:
+              json.dump(out, f, indent=2)
+          print(json.dumps({'count': len(out.get('papers', [])), 'same_week': out.get('same_week_2021_02_24', []), 'error': out.get('error')}, indent=2)[:20000])
+          PY
+      - name: Commit result
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add arxiv_result.json
+          git commit -m "Update arxiv result" || exit 0
+          git push
