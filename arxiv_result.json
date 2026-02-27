@@ -1,0 +1,177 @@
+{
+  "url": "http://export.arxiv.org/api/query?search_query=all%3A%22Wayne+Polyzou%22&start=0&max_results=20&sortBy=submittedDate&sortOrder=descending",
+  "papers": [
+    {
+      "title": "Reaction Theory",
+      "published": "2023-10-31T17:17:33Z",
+      "updated": "2024-06-26T18:51:21Z",
+      "authors": [
+        "Brady J. Martin",
+        "Wayne N. Polyzou"
+      ]
+    },
+    {
+      "title": "Electromagnetic current operators for phenomenological relativistic models",
+      "published": "2023-10-30T03:22:13Z",
+      "updated": "2023-10-30T03:22:13Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Light-front puzzles",
+      "published": "2023-04-07T21:54:35Z",
+      "updated": "2023-04-12T19:00:53Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Path integrals, complex probabilities and the discrete Weyl representation",
+      "published": "2021-08-27T20:33:25Z",
+      "updated": "2024-06-04T19:34:52Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "The relation between instant and light-front formulations of quantum field theory",
+      "published": "2021-02-10T16:14:02Z",
+      "updated": "2021-04-28T20:39:35Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Light-front quantum mechanics and quantum field theory",
+      "published": "2020-01-17T20:28:22Z",
+      "updated": "2020-01-17T20:28:22Z",
+      "authors": [
+        "Wayne N. Polyzou"
+      ]
+    },
+    {
+      "title": "Relativistic invariance in Euclidean formulations of quantum mechanics",
+      "published": "2019-06-24T17:00:11Z",
+      "updated": "2019-06-24T17:00:11Z",
+      "authors": [
+        "Gohin Shaikh Samad",
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "The light-front vacuum",
+      "published": "2016-01-08T17:02:03Z",
+      "updated": "2016-01-08T17:02:03Z",
+      "authors": [
+        "Wayne Polyzou",
+        "Marc Herrmann"
+      ]
+    },
+    {
+      "title": "Scattering asymptotic conditions in Euclidean relativistic quantum theory",
+      "published": "2015-12-10T17:13:55Z",
+      "updated": "2015-12-10T17:13:55Z",
+      "authors": [
+        "Gordon Aiello",
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Relativistic few-body methods",
+      "published": "2015-09-03T03:19:25Z",
+      "updated": "2015-09-03T03:19:25Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "The Light-Front Vacuum",
+      "published": "2015-02-04T15:26:35Z",
+      "updated": "2015-02-04T15:26:35Z",
+      "authors": [
+        "Marc Herrmann",
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Wavelets in field theory",
+      "published": "2013-12-12T19:16:22Z",
+      "updated": "2013-12-12T19:16:22Z",
+      "authors": [
+        "Wayne Polyzou",
+        "Fatih Bulut"
+      ]
+    },
+    {
+      "title": "Relativistic few-body physics",
+      "published": "2013-12-12T19:04:06Z",
+      "updated": "2013-12-12T19:04:06Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Euclidean Relativistic Quantum Mechanics",
+      "published": "2013-01-28T17:07:42Z",
+      "updated": "2013-01-28T17:07:42Z",
+      "authors": [
+        "Philip Kopp",
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Wavelets in Field Theory",
+      "published": "2013-01-28T15:03:35Z",
+      "updated": "2013-06-05T21:24:39Z",
+      "authors": [
+        "Fatih Bulut",
+        "Wayne N. Polyzou"
+      ]
+    },
+    {
+      "title": "Progress in Euclidean relativistic few-body quantum mechanics",
+      "published": "2012-10-07T19:07:44Z",
+      "updated": "2012-10-07T19:07:44Z",
+      "authors": [
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "A Euclidean formulation of relativistic quantum mechanics",
+      "published": "2011-06-21T04:37:02Z",
+      "updated": "2011-06-21T04:37:02Z",
+      "authors": [
+        "Philip Kopp",
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Stability of Covariant Relativistic Quantum Theory",
+      "published": "2003-12-01T01:18:19Z",
+      "updated": "2004-05-31T19:32:49Z",
+      "authors": [
+        "Victor Wessels",
+        "Wayne Polyzou"
+      ]
+    },
+    {
+      "title": "Cluster properties in relativistic quantum mechanics of N-particle systems",
+      "published": "2002-01-07T05:56:29Z",
+      "updated": "2003-05-30T15:52:51Z",
+      "authors": [
+        "W. N. Polyzou"
+      ]
+    },
+    {
+      "title": "Relativistic Quantum Dynamics of Many-Body Systems",
+      "published": "2001-02-22T04:23:01Z",
+      "updated": "2001-02-22T04:23:01Z",
+      "authors": [
+        "F. Coester",
+        "W. N. Polyzou"
+      ]
+    }
+  ],
+  "same_week_2021_02_24": []
+}
