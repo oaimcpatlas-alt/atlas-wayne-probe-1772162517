@@ -1,0 +1,76 @@
+{
+  "before_codes": [
+    {
+      "id": "19c9d01612f63f17",
+      "date": "Fri, 27 Feb 2026 02:50:38 +0000 (UTC)",
+      "subject": "MongoDB verification code: 572188",
+      "code": "572188"
+    },
+    {
+      "id": "19c9d01314e0e17f",
+      "date": "Fri, 27 Feb 2026 02:50:26 +0000 (UTC)",
+      "subject": "MongoDB verification code: 104510",
+      "code": "104510"
+    },
+    {
+      "id": "19c9cff41422ea6a",
+      "date": "Fri, 27 Feb 2026 02:48:18 +0000 (UTC)",
+      "subject": "MongoDB verification code: 954814",
+      "code": "954814"
+    },
+    {
+      "id": "19c9cfd4ec4aee22",
+      "date": "Fri, 27 Feb 2026 02:46:11 +0000 (UTC)",
+      "subject": "MongoDB verification code: 395553",
+      "code": "395553"
+    },
+    {
+      "id": "19c9cfa118131988",
+      "date": "Fri, 27 Feb 2026 02:42:38 +0000 (UTC)",
+      "subject": "MongoDB verification code: 850598",
+      "code": "850598"
+    },
+    {
+      "id": "19c9cf7d145b47a8",
+      "date": "Fri, 27 Feb 2026 02:40:11 +0000 (UTC)",
+      "subject": "MongoDB verification code: 515700",
+      "code": "515700"
+    },
+    {
+      "id": "19c9cf593ec0bed2",
+      "date": "Fri, 27 Feb 2026 02:37:44 +0000 (UTC)",
+      "subject": "MongoDB verification code: 267494",
+      "code": "267494"
+    },
+    {
+      "id": "19c9cf385f4425d6",
+      "date": "Fri, 27 Feb 2026 02:35:30 +0000 (UTC)",
+      "subject": "MongoDB verification code: 047205",
+      "code": "047205"
+    },
+    {
+      "id": "19c9cf02919080ea",
+      "date": "Fri, 27 Feb 2026 02:31:49 +0000 (UTC)",
+      "subject": "MongoDB verification code: 778332",
+      "code": "778332"
+    },
+    {
+      "id": "19c9ce607d2a6eaf",
+      "date": "Fri, 27 Feb 2026 02:20:45 +0000 (UTC)",
+      "subject": "MongoDB verification code: 409057",
+      "code": "409057"
+    }
+  ],
+  "verify": {
+    "status": 400,
+    "url": "https://account.mongodb.com/account/auth/verify",
+    "content_type": "application/json",
+    "json": {
+      "errorCode": "RATE_LIMITED",
+      "version": "1",
+      "status": "ERROR"
+    }
+  },
+  "error": "auth failed",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 96, in <module>\nRuntimeError: auth failed\n"
+}
