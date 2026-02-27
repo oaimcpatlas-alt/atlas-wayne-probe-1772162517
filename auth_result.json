@@ -1,0 +1,885 @@
+{
+  "start": 1772173245.8434467,
+  "password_set_to": "Rr8!Kt4@Zv6#Lp2$Qm5%Xc9",
+  "reset_email_checks": [
+    {
+      "attempt": 1,
+      "email": {
+        "id": "19c9dc1910b4dd8d",
+        "subject": "Password Reset",
+        "token": "d178a5cb40b7b0e1f433d1b31c6ddb9d7a03f1aa0110ae8c0da22b9d665e2480"
+      }
+    },
+    {
+      "attempt": 2,
+      "email": {
+        "id": "19c9dc1f89589567",
+        "subject": "Password Reset",
+        "token": "380d2929a57530b88861075b14567464a7bc86f4e425d8c89c75664cacac2f77"
+      }
+    },
+    {
+      "attempt": 3,
+      "email": {
+        "id": "19c9dc23b70da188",
+        "subject": "Password Reset",
+        "token": "818ee34a8346a7a25a343da27963429365999b589903ebcb54cf5491d4dc43df"
+      }
+    },
+    {
+      "attempt": 4,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 5,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 6,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 7,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 8,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 9,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 10,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 11,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 12,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 13,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 14,
+      "email": {
+        "id": "19c9dc2b2655e568",
+        "subject": "Password Reset",
+        "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6"
+      }
+    },
+    {
+      "attempt": 15,
+      "email": {
+        "id": "19c9dc7c50cf099b",
+        "subject": "Password Reset",
+        "token": "ff06976dfaa09c32870d655c46badaf714fa03e7e50b75161f8888082b084b5e"
+      }
+    },
+    {
+      "attempt": 16,
+      "email": {
+        "id": "19c9dc7c50cf099b",
+        "subject": "Password Reset",
+        "token": "ff06976dfaa09c32870d655c46badaf714fa03e7e50b75161f8888082b084b5e"
+      }
+    },
+    {
+      "attempt": 17,
+      "email": {
+        "id": "19c9dc7c50cf099b",
+        "subject": "Password Reset",
+        "token": "ff06976dfaa09c32870d655c46badaf714fa03e7e50b75161f8888082b084b5e"
+      }
+    },
+    {
+      "attempt": 18,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 19,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 20,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 21,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 22,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 23,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 24,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 25,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 26,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 27,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 28,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 29,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    },
+    {
+      "attempt": 30,
+      "email": {
+        "id": "19c9dc952cd11868",
+        "subject": "Password Reset",
+        "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32"
+      }
+    }
+  ],
+  "reset_complete_attempts": [
+    {
+      "attempt": 1,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "d178a5cb40b7b0e1f433d1b31c6ddb9d7a03f1aa0110ae8c0da22b9d665e2480",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 2,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "380d2929a57530b88861075b14567464a7bc86f4e425d8c89c75664cacac2f77",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 3,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "818ee34a8346a7a25a343da27963429365999b589903ebcb54cf5491d4dc43df",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 4,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 5,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 6,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 7,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 8,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 9,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 10,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 11,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 12,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 13,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 14,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "1e6dd7bf114f23ae3fb9d3a1ee8b5226427933a0132cf6a5117aaf7257edf7f6",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 15,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "ff06976dfaa09c32870d655c46badaf714fa03e7e50b75161f8888082b084b5e",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 16,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "ff06976dfaa09c32870d655c46badaf714fa03e7e50b75161f8888082b084b5e",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 17,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "ff06976dfaa09c32870d655c46badaf714fa03e7e50b75161f8888082b084b5e",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 18,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 19,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 20,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 21,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 22,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 23,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 24,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 25,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 26,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 27,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 28,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 29,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 30,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "token": "f172f1cb53469cfb4f9fda8b5c3e7cb5c6c210948e9a883272cb55e376042a32",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    }
+  ],
+  "reset_request_attempts": [
+    {
+      "attempt": 1,
+      "status": 200,
+      "text": "{\"resource\":\"/account/resetPasswordRequest\",\"errorCode\":\"NONE\",\"version\":\"1\",\"status\":\"OK\"}",
+      "json": {
+        "resource": "/account/resetPasswordRequest",
+        "errorCode": "NONE",
+        "version": "1",
+        "status": "OK"
+      }
+    },
+    {
+      "attempt": 2,
+      "status": 200,
+      "text": "{\"resource\":\"/account/resetPasswordRequest\",\"errorCode\":\"NONE\",\"version\":\"1\",\"status\":\"OK\"}",
+      "json": {
+        "resource": "/account/resetPasswordRequest",
+        "errorCode": "NONE",
+        "version": "1",
+        "status": "OK"
+      }
+    },
+    {
+      "attempt": 3,
+      "status": 200,
+      "text": "{\"resource\":\"/account/resetPasswordRequest\",\"errorCode\":\"NONE\",\"version\":\"1\",\"status\":\"OK\"}",
+      "json": {
+        "resource": "/account/resetPasswordRequest",
+        "errorCode": "NONE",
+        "version": "1",
+        "status": "OK"
+      }
+    },
+    {
+      "attempt": 4,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 5,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 6,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 7,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 8,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 9,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 10,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 11,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 12,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 13,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 14,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 15,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 16,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 17,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 18,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 19,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 20,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 21,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 22,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 23,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 24,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 25,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 26,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 27,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 28,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 29,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    },
+    {
+      "attempt": 30,
+      "status": 429,
+      "text": "{\"errorCode\":\"RATE_LIMITED\",\"version\":\"1\",\"status\":\"ERROR\"}",
+      "json": {
+        "errorCode": "RATE_LIMITED",
+        "version": "1",
+        "status": "ERROR"
+      }
+    }
+  ],
+  "error": "Could not reset password within retry window",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 143, in <module>\nRuntimeError: Could not reset password within retry window\n"
+}
