@@ -1,0 +1,38 @@
+name: Calendar Prime Days Query
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'calendar_prime_days.py'
+      - 'calendar_prime_days_trigger.txt'
+      - '.github/workflows/calendar-prime-days.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install requests
+      - name: Run calendar query
+        run: |
+          python calendar_prime_days.py || true
+          test -f calendar_prime_days_result.json && cat calendar_prime_days_result.json | head -c 50000 || true
+      - name: Commit outputs
+        if: always()
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add calendar_prime_days.py calendar_prime_days_trigger.txt calendar_prime_days_result.json .github/workflows/calendar-prime-days.yml
+          git commit -m "Run calendar prime days query" || exit 0
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && exit 0 || true
+            sleep 15
+          done
+          exit 0
