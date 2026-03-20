@@ -1,12 +1,13 @@
-import json, time, traceback, requests
+
+import json, time, traceback, requests, re
 
 CLIENT_ID = ''.join(['857391432953-','be2nodtmf2lbal35d4mvuarq13d4j6e7','.apps.googleusercontent.com'])
 CLIENT_SECRET = ''.join(['GOCSPX-','PEDpJm_okV4pc7uh6pMu','OhJhONzr'])
 REFRESH_TOKEN = ''.join(['1/','/05uaECVUX0d2aCgYIARAAGAUSNwF-L9IrJ9','e1mZ25z15ccbGTefja3Jxf3ecM5X2OPpiHhzCL3Tyne8Oq8gM','CkIj9ab3EGoIsj0A'])
 
 result = {
-    'started_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-    'prime_days_assumed': ['2025-07-08', '2025-07-11'],
+    "started_at": time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+    "prime_days_assumed": ["2025-07-08", "2025-07-11"],
 }
 
 def refresh_access_token():
@@ -47,10 +48,32 @@ def list_events(access_token, time_min, time_max, label):
     result[f'events_body_{label}'] = body
     return body
 
+def ser_event(ev):
+    return {
+        'id': ev.get('id'),
+        'summary': ev.get('summary'),
+        'location': ev.get('location'),
+        'description': (ev.get('description') or '')[:5000],
+        'start': (ev.get('start') or {}).get('dateTime') or (ev.get('start') or {}).get('date'),
+        'end': (ev.get('end') or {}).get('dateTime') or (ev.get('end') or {}).get('date'),
+        'htmlLink': ev.get('htmlLink'),
+    }
+
+DINNER_RE = re.compile(r'\b(dinner|restaurant|brunch|lunch|breakfast|cafe|café|bistro|bar|grill|sushi|steak|tavern|eat|meal)\b', re.I)
+
 try:
     token = refresh_access_token()
-    list_events(token, '2025-07-08T00:00:00Z', '2025-07-12T00:00:00Z', 'prime_window')
-    list_events(token, '2025-07-01T00:00:00Z', '2025-08-01T00:00:00Z', 'july')
+    prime = list_events(token, '2025-07-08T00:00:00Z', '2025-07-12T00:00:00Z', 'prime_window')
+    july = list_events(token, '2025-07-01T00:00:00Z', '2025-08-01T00:00:00Z', 'july')
+    prime_items = prime.get('items') or []
+    july_items = july.get('items') or []
+    result['prime_items'] = [ser_event(e) for e in prime_items]
+    result['july_items_count'] = len(july_items)
+    result['prime_dinnerish'] = []
+    for ev in prime_items:
+        hay = ' '.join([ev.get('summary',''), ev.get('location',''), ev.get('description','')])
+        if DINNER_RE.search(hay):
+            result['prime_dinnerish'].append(ser_event(ev))
 except Exception as e:
     result['error'] = repr(e)
     result['traceback'] = traceback.format_exc()
