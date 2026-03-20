@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-03-18T07:28:06Z",
+  "started_at": "2026-03-20T22:13:20Z",
   "prime_days_assumed": [
     "2025-07-08",
     "2025-07-11"
@@ -10,5 +10,5 @@
     "error_description": "Bad Request"
   },
   "error": "HTTPError('400 Client Error: Bad Request for url: https://oauth2.googleapis.com/token')",
-  "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/atlas-wayne-probe-1772162517/atlas-wayne-probe-1772162517/calendar_prime_days.py\", line 51, in <module>\n    token = refresh_access_token()\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/atlas-wayne-probe-1772162517/atlas-wayne-probe-1772162517/calendar_prime_days.py\", line 28, in refresh_access_token\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/requests/models.py\", line 1026, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://oauth2.googleapis.com/token\n"
+  "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/atlas-wayne-probe-1772162517/atlas-wayne-probe-1772162517/calendar_prime_days.py\", line 65, in <module>\n    token = refresh_access_token()\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/atlas-wayne-probe-1772162517/atlas-wayne-probe-1772162517/calendar_prime_days.py\", line 29, in refresh_access_token\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/requests/models.py\", line 1026, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://oauth2.googleapis.com/token\n"
 }
